@@ -1,6 +1,7 @@
 ---
 - name: Push docker image to docker hub
-  hosts: ubuntu
+  hosts: localhost
+  connection: local
   remote_user: gururaj
   tasks:
     - name: tag image
