@@ -1,0 +1,11 @@
+---
+- name: Push docker image to docker hub
+  hosts: ubuntu
+  remote_user: gururaj
+  tasks:
+    - name: push image
+      community.docker.docker_image:
+        name: calc
+        repository: gururajmujumdar/calc
+        tag: latest
+        push: yes
