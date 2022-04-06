@@ -7,5 +7,8 @@
     - name: tag image
       command: docker tag calc gururajmujumdar/calc
 
+    - name: login to docker hub
+      command: docker login -u="gururajmujumdar" -p="Gururaj23$"
+
     - name: push image
       command: docker push gururajmujumdar/calc
