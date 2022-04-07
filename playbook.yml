@@ -4,11 +4,6 @@
   connection: local
   remote_user: gururaj
   tasks:
-    - name: tag image
-      command: docker tag calc gururajmujumdar/calc
+    - name: pull image
+      command: docker pull gururajmujumdar/calc:latest
 
-    - name: login to docker hub
-      command: docker login -u="gururajmujumdar" -p="Gururaj23$"
-
-    - name: push image
-      command: docker push gururajmujumdar/calc
