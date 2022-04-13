@@ -1,6 +1,11 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Scanner;
 
 public class ScientificCalculator {
+
+    private static final Logger logger= LogManager.getLogger(ScientificCalculator.class);
 
     public static void main(String[] args){
         //System.out.print("Helllo");
@@ -58,23 +63,31 @@ public class ScientificCalculator {
     }
 
     public double squareroot(double number){
+        logger.info("[SQUARE ROOT] - "+number);
+        logger.info("[RESULT SQUARE ROOT] - "+Math.sqrt(number));
         return Math.sqrt(number);
     }
 
     public int factorial(int number){
+        logger.info("[FACTORIAL] - "+number);
         int fact=1;
         while(number>0){
             fact=fact*number;
             number--;
         }
+        logger.info("[RESULT FACTORIAL] - "+fact);
         return fact;
     }
 
     public double naturalLog(double number){
+        logger.info("[NATURAL LOG] - "+number);
+        logger.info("[RESULT NATURAL LOG] - "+Math.log(number));
         return Math.log(number);
     }
 
     public double power(double number,double pow){
+        logger.info("[POWER FUNCTION] - "+number+"^"+pow);
+        logger.info("[RESULT POWER FUNCTION] - "+Math.pow(number,pow));
         return Math.pow(number,pow);
     }
 }
