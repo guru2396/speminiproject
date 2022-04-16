@@ -1,6 +1,8 @@
 ---
 - name: Pull docker image from docker hub
   hosts: ubuntu
+  become: yes
+  become_user: root
   tasks:
     - name: pull image
       command: docker pull gururajmujumdar/calc:latest
