@@ -1,8 +1,6 @@
 ---
-- name: Push docker image to docker hub
-  hosts: localhost
-  connection: local
-  remote_user: gururaj
+- name: Pull docker image from docker hub
+  hosts: ubuntu
   tasks:
     - name: pull image
       command: docker pull gururajmujumdar/calc:latest
